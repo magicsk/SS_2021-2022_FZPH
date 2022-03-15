@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA9D3BCF27E0EAE0000B5D61 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DA9D3BCE27E0EAE0000B5D61 /* main.c */; };
+		DA9D3BCF27E0EAE0000B5D61 /* ex04.c in Sources */ = {isa = PBXBuildFile; fileRef = DA9D3BCE27E0EAE0000B5D61 /* ex04.c */; };
+		DA9D3BD727E0EB91000B5D61 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D3BD627E0EB91000B5D61 /* OpenGL.framework */; platformFilter = maccatalyst; };
+		DA9D3BD927E0EB97000B5D61 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D3BD827E0EB97000B5D61 /* GLUT.framework */; };
+		DA9D3BDB27E0EED3000B5D61 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D3BDA27E0EED3000B5D61 /* libGLEW.2.2.0.dylib */; };
+		DA9D3BDC27E0EED3000B5D61 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = DA9D3BDA27E0EED3000B5D61 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +24,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		DA9D3BDD27E0EED3000B5D61 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA9D3BDC27E0EED3000B5D61 /* libGLEW.2.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA9D3BCB27E0EAE0000B5D61 /* FZPH */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FZPH; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA9D3BCE27E0EAE0000B5D61 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DA9D3BCE27E0EAE0000B5D61 /* ex04.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ex04.c; sourceTree = "<group>"; };
+		DA9D3BD627E0EB91000B5D61 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		DA9D3BD827E0EB97000B5D61 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		DA9D3BDA27E0EED3000B5D61 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9D3BD927E0EB97000B5D61 /* GLUT.framework in Frameworks */,
+				DA9D3BDB27E0EED3000B5D61 /* libGLEW.2.2.0.dylib in Frameworks */,
+				DA9D3BD727E0EB91000B5D61 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				DA9D3BCD27E0EAE0000B5D61 /* FZPH */,
 				DA9D3BCC27E0EAE0000B5D61 /* Products */,
+				DA9D3BD527E0EB91000B5D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +79,19 @@
 		DA9D3BCD27E0EAE0000B5D61 /* FZPH */ = {
 			isa = PBXGroup;
 			children = (
-				DA9D3BCE27E0EAE0000B5D61 /* main.c */,
+				DA9D3BCE27E0EAE0000B5D61 /* ex04.c */,
 			);
 			path = FZPH;
+			sourceTree = "<group>";
+		};
+		DA9D3BD527E0EB91000B5D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9D3BDA27E0EED3000B5D61 /* libGLEW.2.2.0.dylib */,
+				DA9D3BD827E0EB97000B5D61 /* GLUT.framework */,
+				DA9D3BD627E0EB91000B5D61 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +104,7 @@
 				DA9D3BC727E0EAE0000B5D61 /* Sources */,
 				DA9D3BC827E0EAE0000B5D61 /* Frameworks */,
 				DA9D3BC927E0EAE0000B5D61 /* CopyFiles */,
+				DA9D3BDD27E0EED3000B5D61 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -119,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9D3BCF27E0EAE0000B5D61 /* main.c in Sources */,
+				DA9D3BCF27E0EAE0000B5D61 /* ex04.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,16 +273,28 @@
 		DA9D3BD327E0EAE0000B5D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glew/2.2.0_1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE = NO;
+				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 			};
 			name = Debug;
 		};
 		DA9D3BD427E0EAE0000B5D61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include;
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glew/2.2.0_1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_WORKSPACE = NO;
+				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 			};
 			name = Release;
 		};
